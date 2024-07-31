@@ -1,8 +1,21 @@
 class Employee
+  attr_accessor :id, :name, :department, :position, :attendance
 
+  def initialize(details = {})
+    @id = details[:id]
+    @name = details[:name]
+    @department = details[:department]
+    @position = details[:position]
+    @attendance = []
+  end
 end
 
 class attendance_manager
+  attr_accessor :employees
+
+  def initialize
+    @employees = []
+  end
 
 end
 
